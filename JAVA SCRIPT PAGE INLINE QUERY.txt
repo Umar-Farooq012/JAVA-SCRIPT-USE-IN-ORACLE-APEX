@@ -1,0 +1,1 @@
+javascript:$s('P16_DG_ID','#ID#');apex.region('DETAIL').refresh();openModal('DETAIL');
