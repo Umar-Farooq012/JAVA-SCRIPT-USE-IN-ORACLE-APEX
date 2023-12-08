@@ -1,1 +1,2 @@
+This code link in inline form in sub region
 javascript:$s('P16_DG_ID','#ID#');apex.region('DETAIL').refresh();openModal('DETAIL');
