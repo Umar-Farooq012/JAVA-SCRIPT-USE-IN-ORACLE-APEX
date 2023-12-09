@@ -1,2 +1,7 @@
 This code link in inline form in sub region
 javascript:$s('P16_DG_ID','#ID#');apex.region('DETAIL').refresh();openModal('DETAIL');
+
+
+======================================================
+this code link in other page 
+javascript:$s('P91_MEMBERSHIP','#BOOKING_NO#');
