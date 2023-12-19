@@ -5,3 +5,10 @@ javascript:$s('P16_DG_ID','#ID#');apex.region('DETAIL').refresh();openModal('DET
 ======================================================
 this code link in other page 
 javascript:$s('P91_MEMBERSHIP','#BOOKING_NO#');
+================================================
+
+This code put in the button dynamic action, type = excute java script code 
+==$(this.affectedElements).dialog('open')==
+
+then affected elements 
+region name 
