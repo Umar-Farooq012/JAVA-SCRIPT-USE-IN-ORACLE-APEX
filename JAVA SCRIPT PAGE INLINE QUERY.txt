@@ -2,6 +2,8 @@ This code link in inline form in sub region
 javascript:$s('P16_DG_ID','#ID#');apex.region('DETAIL').refresh();openModal('DETAIL');
 javascript:$s('P43_RATE_ID','#HEAD_ID#');apex.region('DETAIL').refresh();openModal('DETAIL');
 
+javascript:$s('P27_DETAILS','#ID#'); openModal('DET');
+
 
 ======================================================
 this code link in other page 
