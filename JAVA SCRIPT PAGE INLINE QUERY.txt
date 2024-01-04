@@ -24,4 +24,4 @@ one click in dashboard and open the report
 this code is
 javascript:openModal('openreport');    -- openreport static id in inline report 
 inline report size css code 
-======    js-dialog-size1000x600
+css classes ======    js-dialog-size1000x600
