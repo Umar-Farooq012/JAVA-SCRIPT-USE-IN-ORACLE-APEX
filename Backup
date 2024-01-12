@@ -74,6 +74,29 @@ PAGE NO 13
                      --AND MS.PLOT_TYPE  IS NULL
                      --AND DPD.APPROVAL_STATUS IN ('APPROVED');
 
+PAGE NO 13 QUERY MIS ZOYA AND ME (UMAR FAROOQ)
+
+DECLARE
+v_sql varchar2(4000);
+BEGIN
+   if :P13_ID IS NULL then 
+     v_sql := 'SELECT DPD.PLOT_NO,DPD.ID AS RETURN   
+                    FROM DGMS_PLOT_DETAILS DPD
+                    LEFT JOIN DGMS_INVENTORY_MS_HEADER DIMH ON DIMH.PLOT_ID = DPD.ID AND DIMH.ORG_ID = :P_ORG_ID 
+                    WHERE  DPD.ORG_ID = :P_ORG_ID
+                    AND DIMH.ID IS NULL AND NVL(DPD.PLOT_TYPE,''PLOT'') = :P13_NEW AND DPD.APPROVAL_STATUS = ''APPROVED''
+                    ORDER BY DPD.PLOT_NO ASC';
+    else
+     v_sql := 'SELECT DPD.PLOT_NO,DPD.ID AS RETURN   
+                    FROM DGMS_PLOT_DETAILS DPD
+                    JOIN DGMS_INVENTORY_MS_HEADER MS ON  MS.PLOT_ID = DPD.ID AND MS.ORG_ID = :P_ORG_ID
+                    WHERE  DPD.ORG_ID = :P_ORG_ID  AND MS.ID = :P13_ID AND DPD.APPROVAL_STATUS = ''APPROVED''
+                    ORDER BY DPD.PLOT_NO ASC;';
+   end if; 
+      return v_sql;
+
+END;
+
 
 
 
