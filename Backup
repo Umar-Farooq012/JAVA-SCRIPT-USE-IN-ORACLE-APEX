@@ -52,6 +52,27 @@ FROM DGMS_FILES_DETAILS
 WHERE CATEGORY IS NOT NULL
 GROUP BY CATEGORY, NATURE;
 
+=============
+PAGE NO 13
+      SELECT DPD.PLOT_NO,DPD.ID AS RETURN   
+                    FROM DGMS_PLOT_DETAILS DPD
+                    LEFT JOIN DGMS_INVENTORY_MS_HEADER DIMH ON DIMH.PLOT_ID = DPD.ID AND DIMH.ORG_ID = :P_ORG_ID 
+                    LEFT JOIN DGMS_FILES_DETAILS DFD ON  DFD.ID = DPD.FILE_ID
+                    AND NVL(DIMH.PLOT_TYPE,'FILE') = 'FILE'
+                     WHERE  DPD.ORG_ID = :P_ORG_ID
+                     AND :P13_NEW ='FILE'
+                     --AND DPD.APPROVAL_STATUS ='APPROVED' 
+                   
+                     UNION 
+
+                     SELECT DPD.PLOT_NO,DPD.ID AS RETURN   
+                    FROM DGMS_PLOT_DETAILS DPD
+                    JOIN DGMS_INVENTORY_MS_HEADER MS ON  MS.PLOT_ID = DPD.ID --AND MS.ORG_ID = :P_ORG_ID
+                     WHERE  DPD.ORG_ID = :P_ORG_ID 
+                     AND NVL(DPD.PLOT_TYPE,'PLOT') = 'PLOT'
+                     AND :P13_NEW ='PLOT' 
+                     --AND MS.PLOT_TYPE  IS NULL
+                     --AND DPD.APPROVAL_STATUS IN ('APPROVED');
 
 
 
