@@ -26,5 +26,7 @@ this code is
 javascript:openModal('openreport');    -- openreport static id in inline report 
 inline report size css code 
 css classes ======    js-dialog-size1000x600
+style="background-color:#ADD8E6;"
+
 
 <span style="color:orange;font-size:14px">★✪★✪★ (M)</span>
