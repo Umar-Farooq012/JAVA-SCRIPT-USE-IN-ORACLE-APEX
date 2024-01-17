@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    var plotOption = $("input[name='P13_FILE_TYPE'][value='PLOT']");
+    var plotOption1 = $("input[name='P13_FILE_TYPE'][value='FILE']");
+    if ($v("P13_ID") !== null && $v("P13_ID") !== ""  && $v("P13_FILE_TYPE") == "FILE") {
+        plotOption.prop('disabled', true);
+    }
+     else if ($v("P13_ID") !== null && $v("P13_ID") !== ""  && $v("P13_FILE_TYPE") == "PLOT") {
+         plotOption1.prop('disabled', true);
+     }
+});
