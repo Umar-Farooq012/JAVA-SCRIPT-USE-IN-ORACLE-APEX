@@ -8,3 +8,22 @@ $(document).ready(function(){
          plotOption1.prop('disabled', true);
      }
 });
+
+//=============================================================================================
+
+$(document).ready(function(){
+    var plotOption = $("input[name='P13_FILE_TYPE'][value='PLOT']");
+    var popupLovItem = document.getElementById("P13_PLOT_ID");
+    var plotOption1 = $("input[name='P13_FILE_TYPE'][value='FILE']");
+
+    if ($v("P13_ID") !== null && $v("P13_ID") !== ""  && $v("P13_FILE_TYPE") == "FILE") {
+        plotOption.prop('disabled', true);
+         popupLovItem.setAttribute("disabled", "disabled");
+    }
+     else if ($v("P13_ID") !== null && $v("P13_ID") !== ""  && $v("P13_FILE_TYPE") == "PLOT") {
+         plotOption1.prop('disabled', true);
+          popupLovItem.setAttribute("disabled", "disabled");
+     }
+});
+
+this second code : is me ham change ke upar id bi disable karwa rhy hn ,
