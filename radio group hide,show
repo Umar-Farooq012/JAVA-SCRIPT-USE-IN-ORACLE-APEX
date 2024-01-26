@@ -27,3 +27,19 @@ $(document).ready(function(){
 });
 
 this second code : is me ham change ke upar id bi disable karwa rhy hn ,
+
+
+=====================================================================================
+
+this query only enter numeric values in item not for character 
+
+$(".only-numeric").bind("keypress", function (e) {
+    var keyCode = e.which ? e.which : e.keyCode
+
+    if (!(keyCode >= 48 && keyCode <= 57)) {
+        return false;
+    }else{
+        return true;
+    }
+});
+ur phir only-numeric ko hm ne css-classes me lgna ha jo advanced me ha 
