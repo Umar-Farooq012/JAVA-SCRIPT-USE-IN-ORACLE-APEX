@@ -6,7 +6,7 @@ javascript:$s('P79_BOOKING_ID','#BOOKING_ID#');javascript:$s('P79_ARREAR','ARREA
 
 select DISTINCT(DEALER_ID) , count(file_id) FILE_ASSIGN  from DGMS_DEALERS_FORMS
 where status = 'TRANSFERRED'
-GROUP BY DEALER_ID
+GROUP BY DEALER_ID    
      
 
 
