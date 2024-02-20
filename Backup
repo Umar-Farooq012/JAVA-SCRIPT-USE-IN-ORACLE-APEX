@@ -1,5 +1,5 @@
 Arrear 2 link code 
-javascript:$s('P79_BOOKING_ID','#BOOKING_ID#');javascript:$s('P79_ARREAR','ARREAR NOTICE # 2');
+javascript:$s('P79_BOOKING_ID','#BOOKING_ID#');javascript:$s('P79_ARREAR','ARREAR NOTICE # 2'); 
 
 
 
