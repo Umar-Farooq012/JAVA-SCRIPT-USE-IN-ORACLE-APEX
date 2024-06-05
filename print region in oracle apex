@@ -1,4 +1,4 @@
-Region Print =================================
+Region Print                                                                                                         ====================================================
 var prtContent = document.getElementById("div1");
 var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=10000,toolbar=0,scrollbars=0,status=0');
 WinPrint.document.write(prtContent.innerHTML);
