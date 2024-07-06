@@ -6,7 +6,7 @@ javascript:$s('P79_BOOKING_ID_1','#BOOKING_ID#');apex.region('arrear').refresh()
 javascript:$s('P27_DETAILS','#ID#'); openModal('DET');
 
  
-class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
+class="t-Button t-Button--simple t-Button--hot t-Button--stretch" 
   
 ======================================================
 this code link in other page 
