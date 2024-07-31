@@ -10,4 +10,3 @@ function restrictNumericInput() {
 
 // Execute function when document is ready
 document.addEventListener('DOMContentLoaded', restrictNumericInput);
-
