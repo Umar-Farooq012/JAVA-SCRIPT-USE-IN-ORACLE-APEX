@@ -1,0 +1,1 @@
+javascript:$s('P55_CHANGE_PASSWORD','#D_DET_ID#');javascript:apex.event.trigger(document, 'ACTIVE');
