@@ -6,3 +6,7 @@ Custom Event : ACTIVE
 Selection Type : js expression
 js expression : document
 
+UPDATE AB_LOOKUP_DETAIL  SET STATUS = CASE WHEN STATUS = 'Y' THEN 'N' ELSE 'Y' END,
+ UPDATED_ON = SYSDATE, UPDATED_BY = :app_user
+WHERE D_DET_ID = :P55_CHANGE_PASSWORD;
+
