@@ -25,7 +25,7 @@ $('#P13_HOLD').change(function(){
      }
 });
 
-https://fallacious-mountain.surge.sh/
+
 
 
 
@@ -50,5 +50,4 @@ $('#P13_HOLD_TYPE').change(function(){
 
 
 
-https://fallacious-mountain.surge.sh/
 https://fallacious-mountain.surge.sh/
