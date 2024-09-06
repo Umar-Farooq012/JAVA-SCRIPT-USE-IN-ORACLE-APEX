@@ -1,0 +1,19 @@
+var model = apex.region("POD").widget().interactiveGrid("getViews","grid").model;
+var items = {};
+var hasDuplicates = false;
+
+model.forEach(function(record, index, id){
+   var itemId = model.getValue(record, "DEMAND_DET_ID");
+   if (items[itemId]) {
+      hasDuplicates = true;
+      return false; // Exit loop
+   } else {
+      items[itemId] = true;
+   }
+});
+
+if (hasDuplicates) {
+   apex.message.alert("Duplicate DEMAND DET ID found. DEMAND DET ID MUST BE UNIQUE.");
+   apex.event.gCancelFlag = true; // Prevent form submission
+}
+
