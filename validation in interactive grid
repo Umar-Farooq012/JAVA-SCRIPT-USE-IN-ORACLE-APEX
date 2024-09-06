@@ -1,3 +1,7 @@
+apex.region("POD").call("getActions").set("edit", true)
+=======================
+
+
 var model = apex.region("POD").widget().interactiveGrid("getViews","grid").model;
 var items = {};
 var hasDuplicates = false;
