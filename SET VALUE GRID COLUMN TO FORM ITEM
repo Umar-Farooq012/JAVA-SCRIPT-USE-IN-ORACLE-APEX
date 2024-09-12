@@ -14,3 +14,4 @@ model.forEach(function(igrow)
 console.log(n_total);
 
 $s('P175_BILL', n_total);
+
