@@ -1,0 +1,8 @@
+// Navigation menu ko hide karne ke liye
+document.getElementById('t_Body_nav').style.display = 'none';
+
+// Top menu bar ko hide karne ke liye
+document.getElementById('t_Header_nav').style.display = 'none';
+
+// Breadcrumb ko hide karne ke liye
+document.getElementById('t_Breadcrumb').style.display = 'none';
