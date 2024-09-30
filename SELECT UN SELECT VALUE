@@ -1,0 +1,65 @@
+var cb$, checked, allRows$,
+    sel$ = $("#P97_SELECTED"),
+    event = this.browserEvent,
+    target$ = $(event.target),
+    th$ = target$.closest("th"),
+    tr$ = target$.closest("tr");
+
+if (th$.length) {
+    // the click was on the "select all"
+    // checkbox or checkbox cell
+    cb$ = th$.find("input");
+    if (cb$.length && cb$.val() === "all") {
+        checked = cb$[0].checked;
+        if (target$[0].nodeName !== 'INPUT') {
+            // only do this if the click was not on the checkbox
+            // because the checkbox will check itself
+            checked = cb$[0].checked = !checked;
+        }
+        if (sel$.val() === "") {
+            sel$.val(":");
+        }
+        $("#LI").find("td input").each(function() {
+            this.checked = checked;
+            // give a visual style to the [un]selected row
+            $(this).closest("tr").toggleClass("selected", checked);
+            // update the hidden selected item
+            sel$.val(sel$.val().replace(":" + this.value + ":", ":"));
+            if (checked) {
+                sel$.val(sel$.val() + this.value + ":");
+            }
+        });
+    }
+} else if (tr$.length) {
+    // the click was on some other data row
+    cb$ = tr$.find("td").first().find("input");
+    checked = cb$[0].checked;
+    if (target$[0].nodeName !== 'INPUT') {
+        // only do this if the click was not on the checkbox
+        // because the checkbox will check itself
+        checked = cb$[0].checked = !checked;
+    }
+    // give a visual style to the [un]selected row
+    tr$.toggleClass("selected", checked);
+    // update the hidden selected item
+    if (checked) {
+        if (sel$.val() === "") {
+             //sel$.val(":");
+            sel$.val("");
+        }
+        //sel$.val(sel$.val() + cb$.val() + ":");
+        sel$.val(sel$.val() + cb$.val()+":");
+        
+    } else {
+        //sel$.val(sel$.val().replace(":" + cb$.val() + ":", ":"));
+        sel$.val(sel$.val().replace(cb$.val()+":", ""));
+        
+    }
+    
+    
+    // update the select all checkbox state
+    allRows$ = $("#LI").find("td input");
+    //checked = (allRows$.length === allRows$.filter(":checked").length);
+    checked = (allRows$.length === allRows$.filter(":checked").length);
+    $("#LI").find("th input")[0].checked = checked;
+}
