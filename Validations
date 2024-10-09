@@ -1,3 +1,53 @@
 gmail validation
 
 ^[A-Za-z]+[A-Za-z0-9.]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$
+
+=======================================
+///////////////////on use for alphabetic (only-alphabetic) use for CSS Classes/////////////////////////////////
+function restrictAlphabeticInput() {
+    document.querySelectorAll('.only-alphabetic').forEach(function(element) {
+        element.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+    });
+}
+document.addEventListener('DOMContentLoaded', restrictAlphabeticInput);
+//============================================================================
+
+
+// $(document).ready(function() {
+//    $('#P123_GUARANTER_CONTECT').keyup(function() {
+//       var phoneNo = $(this).val();
+//       if (phoneNo.length === 4 || phoneNo.length === 7) {
+//          phoneNo += '-';
+//       }
+//       $(this).val(phoneNo);
+//    });
+// });
+
+$(document).ready(function() {
+   $('#P123_GUARANTOR_CONTACT ,#P123_CONTACT_NUMBER').keyup(function() {
+      var phoneNo = $(this).val().replace(/-/g, ''); // Remove existing hyphens
+      if (phoneNo.length > 4) {
+         phoneNo = phoneNo.slice(0, 4) + '-' + phoneNo.slice(4); // Add hyphen after 4 digits
+      }
+      $(this).val(phoneNo);
+   });
+});
+//==================================================================
+$('#P123_GUARANTOR_CNIC').keypress(function(){
+       var cnic = $('#P123_GUARANTOR_CNIC').val();
+       if(cnic.length == 5 || cnic.length == 13){
+           $('#P123_GUARANTOR_CNIC').val($('#P123_GUARANTOR_CNIC').val() +'-');
+       }
+});
+
+function restrictNumericInput() {
+    document.querySelectorAll('.only-numeric').forEach(function(element) {
+        element.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', restrictNumericInput);
