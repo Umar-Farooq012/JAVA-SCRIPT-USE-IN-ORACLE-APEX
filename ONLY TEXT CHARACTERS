@@ -15,5 +15,5 @@ textAreaIds.forEach(function(id) {
             textArea.value = textArea.value.replace(/[^a-zA-Z\s]/g, '');
         });
     }
-});
+}); 
  
