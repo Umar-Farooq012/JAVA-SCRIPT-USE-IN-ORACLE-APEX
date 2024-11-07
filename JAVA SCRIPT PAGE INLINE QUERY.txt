@@ -12,7 +12,7 @@ class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
   
 ======================================================
 this code link in other page 
-javascript:$s('P91_MEMBERSHIP','#BOOKING_NO#');
+javascript:$s('P91_MEMBERSHIP','#BOOKING_NO#'); 
 ================================================
 
 This code put in the button dynamic action, type = excute java script code 
