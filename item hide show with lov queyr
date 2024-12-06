@@ -1,0 +1,10 @@
+$('#P320_TYPE').change(function(){
+    if($v('P320_TYPE') == 'BANK PAYMENT' || $v('P320_TYPE') == 'BANK RECEIPT'){
+        $x_Show('P320_BANK_ACCOUNT');
+        $x_Hide('P320_CASH_ACCOUNT');
+    }
+    else{
+        $x_Hide('P320_BANK_ACCOUNT');
+        $x_Show('P320_CASH_ACCOUNT');
+    }
+});
