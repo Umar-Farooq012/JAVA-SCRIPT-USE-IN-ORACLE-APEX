@@ -1,0 +1,3 @@
+setTimeout(function() {
+    apex.region("TB").refresh();
+}, 200); 
